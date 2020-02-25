@@ -1,21 +1,20 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import environment.SAXExample2;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 
 public class MainGooglePage extends Page{
 
     @FindBy(name = "q")
     private WebElement element;
 
-    public MainGooglePage(WebDriver driver){
-        super(driver);
-    }
-
-    public MainGooglePage open(){
-        driver.get(SAXExample2);
+    public MainGooglePage open() throws IOException, SAXException, ParserConfigurationException {
+        driver.get(SAXExample2.getUrl());
         return this;
     }
 
@@ -24,6 +23,6 @@ public class MainGooglePage extends Page{
         element.sendKeys(inputMessage);
         element.submit();
 
-        return new ResultGooglePage(driver);
+        return new ResultGooglePage();
     }
 }
