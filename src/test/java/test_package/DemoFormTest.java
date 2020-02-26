@@ -14,11 +14,11 @@ public class DemoFormTest extends BasicTest {
     @Test
     public void singleInputeTest() throws InterruptedException, ParserConfigurationException, SAXException, IOException {
         MainGooglePage mainGooglePage = new MainGooglePage().open();
-        ResultGooglePage resultGooglePage = mainGooglePage.inputInSearch("Selenium");
-
-        OpenPage openPage = resultGooglePage.clickOnLine(3);
-
-        Assertions.assertThat(openPage.driver.getPageSource().toLowerCase().contains("время от времени")).isTrue();
+//        ResultGooglePage resultGooglePage = mainGooglePage.inputInSearch("Selenium");
+//
+//        OpenPage openPage = resultGooglePage.clickOnLine(3);
+//
+//        Assertions.assertThat(openPage.driver.getPageSource().toLowerCase().contains("время от времени")).isTrue();
 
     }
 }
