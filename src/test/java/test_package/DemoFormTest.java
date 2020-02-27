@@ -20,6 +20,7 @@ public class DemoFormTest extends BasicTest {
 //        OpenPage openPage = resultGooglePage.clickOnLine(3);
 //
 //        Assertions.assertThat(openPage.driver.getPageSource().toLowerCase().contains("время от времени")).isTrue();
+        OpenPage openPage = new OpenPage();
 
     }
 }

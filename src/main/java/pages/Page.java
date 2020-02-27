@@ -15,9 +15,4 @@ public abstract class Page {
 //        this.driver = driver;
     }
 
-    protected void finalize() throws Throwable{
-        // Куда эту лошик можно перенести?
-        driver.quit();
-    }
-
 }
