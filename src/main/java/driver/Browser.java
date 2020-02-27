@@ -19,7 +19,6 @@ public class Browser {
     }
 
     public static WebDriver getBrowser(){
-        // Проблема. Берет null
         String browser = System.getProperty("BROWSER");
         if (browser == null){
             WebDriverManager.firefoxdriver().setup();
