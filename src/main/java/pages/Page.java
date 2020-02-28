@@ -12,7 +12,6 @@ public abstract class Page {
     protected Page() {
         // Эта штука заменяет явное ожидание?
         PageFactory.initElements(driver, this);
-//        this.driver = driver;
     }
 
 }

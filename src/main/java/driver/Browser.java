@@ -1,6 +1,5 @@
 package driver;
 
-import com.google.common.base.internal.Finalizer;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,7 +17,7 @@ public class Browser {
         }
     }
 
-    public static WebDriver getBrowser(){
+    private static WebDriver getBrowser(){
         String browser = System.getProperty("BROWSER");
         if (browser == null){
             WebDriverManager.firefoxdriver().setup();
